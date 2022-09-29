@@ -22,6 +22,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseCors(options =>
+options.WithOrigins("http://localhost:7286")
+.AllowAnyMethod()
+.AllowAnyHeader()
+.AllowAnyOrigin()
+);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

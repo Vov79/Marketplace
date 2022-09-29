@@ -46,6 +46,7 @@ namespace Marketplace.Controllers
                 return BadRequest("Phone not found.");
             phone.Title = request.Title;
             phone.Price = request.Price;
+            phone.Image = request.Image;
 
             await _context.SaveChangesAsync();
 
